@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button1: UIButton!
     
+    @IBOutlet var alertLabel: UILabel!
+    var counts = [0, 0, 0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //labelName: 매개변수
@@ -52,23 +55,21 @@ class ViewController: UIViewController {
             i!.layer.backgroundColor = UIColor.secondaryLabel.cgColor
         }
     }
-    var count1 = 0
-    var count2 = 0
-    var count3 = 0
 
     @IBAction func button1Pressed(_ sender: UIButton) {
-        count1 += 1
-        label1.text = "\(count1)"
-    }
-    
-    @IBAction func button2Pressed(_ sender: UIButton) {
-        count2 += 1
-        label2.text = "\(count2)"
-    }
-    
-    @IBAction func button3Pressed(_ sender: UIButton) {
-        count3 += 1
-        label3.text = "\(count3)"
+        counts[sender.tag] += sender.tag + 1
+        label1.text = "\(counts[0])"
+        label2.text = "\(counts[1])"
+        label3.text = "\(counts[2])"
+
+        if counts[0] == counts[1] && counts[0] == counts[2] {
+            alertLabel.text = "congraturaion!!! the number is \(counts[0])"
+            alertLabel.textAlignment = .center
+        }
+        else {
+            alertLabel.text = "Try again"
+            alertLabel.textAlignment = .center
+        }
     }
 }
 
