@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var labelList: [UILabel]!
     @IBOutlet var label3: UILabel!
     @IBOutlet var label2: UILabel!
     @IBOutlet var label1: UILabel!
@@ -58,9 +59,8 @@ class ViewController: UIViewController {
 
     @IBAction func button1Pressed(_ sender: UIButton) {
         counts[sender.tag] += sender.tag + 1
-        label1.text = "\(counts[0])"
-        label2.text = "\(counts[1])"
-        label3.text = "\(counts[2])"
+
+        labelList[sender.tag].text = "\(counts[sender.tag])"
 
         if counts[0] == counts[1] && counts[0] == counts[2] {
             alertLabel.text = "congraturaion!!! the number is \(counts[0])"

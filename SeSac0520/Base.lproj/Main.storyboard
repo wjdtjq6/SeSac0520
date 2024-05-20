@@ -82,12 +82,15 @@
                         <outlet property="button3" destination="Ti9-ZZ-siF" id="Amf-If-1pP"/>
                         <outlet property="label1" destination="J92-3f-Hfo" id="7C7-Hk-QA0"/>
                         <outlet property="label2" destination="LnB-W5-XgW" id="AGq-2t-vZd"/>
-                        <outlet property="label3" destination="RRs-wR-aEB" id="Ed6-nd-HzV"/>
+                        <outlet property="label3" destination="RRs-wR-aEB" id="jAg-Uf-AxE"/>
+                        <outletCollection property="labelList" destination="J92-3f-Hfo" collectionClass="NSMutableArray" id="0k0-1d-rjS"/>
+                        <outletCollection property="labelList" destination="LnB-W5-XgW" collectionClass="NSMutableArray" id="Zih-BN-ctU"/>
+                        <outletCollection property="labelList" destination="RRs-wR-aEB" collectionClass="NSMutableArray" id="4l9-ND-CMj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="132" y="1"/>
         </scene>
     </scenes>
     <resources>
